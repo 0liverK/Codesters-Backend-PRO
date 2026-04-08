@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+    {% if page == 'review' %}
+    <div>
+        <h1>Review Selected Subjects</h1>
+        <div>
+            <h2>Selected Subjects</h2>
+            <div>
+                {% for subject in selected_subjects %}
+                <div>
+                    <div>
+                        <div>{{ subject.name }}</div>
+                        <div>{{ subject.estimatedMinutes }} minutes</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <div>Total Estimated Time</div>
+            <div>{{ total_time }} minutes</div>
+        </div>
+        <a href="/">Back to Selection</a>
+    </div>
+    {% else %}
+    <div>
+        <h1>Select Subjects</h1>
+        <form method="POST" action="/process-subjects">
+            <div>
+                {% for subject in subjects %}
+                <div>
+                    <div>
+                        <input type="checkbox" name="subjects" value="{{ subject.id }}">
+                        <div>{{ subject.name }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    {% endif %}
+</body>
+</html>
