@@ -92,3 +92,23 @@ form button {
   font-weight: bold;
   margin-left: auto;
 }
+
+.authors {
+  margin: 16px 0;
+}
+.author {
+  padding: 16px 0;
+}
+.author:not(:last-child) {
+  border-bottom: 2px dotted lightgray;
+}
+.author h2 {
+  margin: 0;
+}
+.author small {
+  color: gray;
+}
+.author p {
+  margin: 8px 0 0 0;
+  font-size: small;
+}

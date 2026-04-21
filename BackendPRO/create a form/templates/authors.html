@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-  	<title>Blog</title>
+  	<title>Authors</title>
   	<link href="/static/styles.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -9,7 +9,7 @@
   <body>
     
     <header>
-      <h1>Blog</h1>
+      <h1>Authors</h1>
       <nav>
         <a href="/">Posts</a>
         <a href="/authors">Authors</a>
@@ -17,18 +17,17 @@
     </header>
   
     <main>
-      <section class="posts">
-        {% for post in posts %}
-          <article class="post">
-            <img src="{{ post['picture'] }}">
+      <section class="authors">
+        {% for author in authors %}
+          <article class="author">
             <div>
-              <h2>{{ post["title"] }}</h2>
-              <small>by {{ post["author"] }}</small>
-              <p>{{ post["content"] }}</p>
+              <h2>{{ author["name"] }}</h2>
+              <small>ID: {{ author["id"] }}</small>
+              <p>Posts: {% if author["posts"] %}{{ author["posts"] | join(", ") }}{% else %}No posts yet{% endif %}</p>
             </div>
           </article>
         {% else %}
-          <p>No posts</p>
+          <p>No authors</p>
         {% endfor %}
       </section>
     </main>
