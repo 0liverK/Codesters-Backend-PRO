@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+* {
+  box-sizing: inherit;
+}
+header, main, footer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+a {
+  color: forestgreen;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: limegreen;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid gray;
+}
+header h1 {
+  margin-left: 8px;
+  margin-right: auto;
+}
+header a, footer a {
+  margin: 0 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 32px;
+  border-top: 2px solid gray;
+}
+
+.posts {
+  margin: 16px 0;
+}
+.post {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 0;
+}
+.post:not(:last-child) {
+  border-bottom: 2px dotted lightgray;
+}
+.post img {
+	width: 150px;
+  height: 150px;
+  margin-right: 16px;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+}
+.post h2 {
+  margin: 0;
+}
+.post small {
+  color: gray;
+}
+
+form {
+  max-width: 400px;
+  margin: 32px auto;
+  padding: 16px;
+  border: 2px dotted lightgray;
+  border-radius: 16px;
+}
+form label {
+  font-size: small;
+  
+}
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  outline-color: forestgreen;
+  font-family: sans-serif;
+}
+form button {
+  display: block;
+  margin-top: 16px;
+  padding: 4px 8px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.authors {
+  margin: 16px 0;
+}
+.author {
+  padding: 16px 0;
+}
+.author:not(:last-child) {
+  border-bottom: 2px dotted lightgray;
+}
+.author h2 {
+  margin: 0;
+}
+.author small {
+  color: gray;
+}
+.author p {
+  margin: 8px 0 0 0;
+  font-size: small;
+}

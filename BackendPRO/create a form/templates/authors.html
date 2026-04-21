@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+  	<title>Authors</title>
+  	<link href="/static/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    
+    <header>
+      <h1>Authors</h1>
+      <nav>
+        <a href="/">Posts</a>
+        <a href="/authors">Authors</a>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="authors">
+        {% for author in authors %}
+          <article class="author">
+            <div>
+              <h2>{{ author["name"] }}</h2>
+              <small>ID: {{ author["id"] }}</small>
+              <p>Posts: {% if author["posts"] %}{{ author["posts"] | join(", ") }}{% else %}No posts yet{% endif %}</p>
+            </div>
+          </article>
+        {% else %}
+          <p>No authors</p>
+        {% endfor %}
+      </section>
+    </main>
+  
+    <footer>
+      <a href="/new_post">+ Add new post</a>
+      <a href="/new_author">+ Add new author</a>
+    </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+  	<title>Add author</title>
+  	<link href="/static/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    
+		<header>
+      <h1>Add author</h1>
+      <nav>
+        <a href="/">Posts</a>
+        <a href="/authors">Authors</a>
+      </nav>
+    </header>
+  
+		<main>
+      <form method="POST" action="/new_author">
+
+        <label for="author_name">Author Name</label>
+        <input
+          type="text"
+          id="author_name"
+          name="author_name"
+          placeholder="Type here..."
+          required
+        >
+        
+        <button>Submit</button>
+				
+      </form>
+    </main>
+  
+    <footer>
+      <a href="/new_post">+ Add new post</a>
+      <a href="/new_author">+ Add new author</a>
+    </footer>
+		
+  </body>
+</html>
