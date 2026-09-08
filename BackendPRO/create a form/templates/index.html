@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
   <head>
@@ -40,3 +41,47 @@
     
   </body>
 </html>
+=======
+<!doctype html>
+<html>
+  <head>
+  	<title>Blog</title>
+  	<link href="/static/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    
+    <header>
+      <h1>Blog</h1>
+      <nav>
+        <a href="/">Posts</a>
+        <a href="/authors">Authors</a>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="posts">
+        {% for post in posts %}
+          <article class="post">
+            <img src="{{ post['picture'] }}">
+            <div>
+              <h2>{{ post["title"] }}</h2>
+              <small>by {{ post["author"] }}</small>
+              <p>{{ post["content"] }}</p>
+            </div>
+          </article>
+        {% else %}
+          <p>No posts</p>
+        {% endfor %}
+      </section>
+    </main>
+  
+    <footer>
+      <a href="/new_post">+ Add new post</a>
+      <a href="/new_author">+ Add new author</a>
+    </footer>
+    
+  </body>
+</html>
+>>>>>>> 7e55dcc47bf16773f420e85142e91aae1c1f84b7
